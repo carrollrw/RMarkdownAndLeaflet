@@ -1,0 +1,17 @@
+---
+title: "R Markdown and Leaflet"
+author: "Reginald W Carroll"
+date: "June 10, 2018"
+output:
+  word_document: default
+  html_document: default
+---
+
+## Fenway Park
+```{r, warning=FALSE}
+library(leaflet)
+
+map_fwp <- leaflet() %>% addTiles() 
+map_fwp <- map_fwp %>% addMarkers(lat=42.346268, lng=-71.095764, popup="Fenway Park")
+map_fwp
+```
